@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		75B697FB1C9BBA3000A79ADC /* zomato-ios-order-sdk.h in Headers */ = {isa = PBXBuildFile; fileRef = 75B697FA1C9BBA3000A79ADC /* zomato-ios-order-sdk.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75B6980B1C9BC15400A79ADC /* ZLocalizations.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 75B698041C9BC15400A79ADC /* ZLocalizations.bundle */; };
+		75B6980D1C9BC15400A79ADC /* ZO2Kit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 75B698061C9BC15400A79ADC /* ZO2Kit.bundle */; };
+		75B6980E1C9BC15400A79ADC /* ZO2Kit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75B698071C9BC15400A79ADC /* ZO2Kit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		75B697F71C9BBA3000A79ADC /* zomato-ios-order-sdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "zomato-ios-order-sdk.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75B697FA1C9BBA3000A79ADC /* zomato-ios-order-sdk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "zomato-ios-order-sdk.h"; sourceTree = "<group>"; };
 		75B697FC1C9BBA3000A79ADC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75B698041C9BC15400A79ADC /* ZLocalizations.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZLocalizations.bundle; sourceTree = "<group>"; };
+		75B698061C9BC15400A79ADC /* ZO2Kit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZO2Kit.bundle; sourceTree = "<group>"; };
+		75B698071C9BC15400A79ADC /* ZO2Kit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZO2Kit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75B6980E1C9BC15400A79ADC /* ZO2Kit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -30,6 +37,7 @@
 		75B697ED1C9BBA2F00A79ADC = {
 			isa = PBXGroup;
 			children = (
+				75B698021C9BC15400A79ADC /* Frameworks */,
 				75B697F91C9BBA3000A79ADC /* zomato-ios-order-sdk */,
 				75B697F81C9BBA3000A79ADC /* Products */,
 			);
@@ -50,6 +58,16 @@
 				75B697FC1C9BBA3000A79ADC /* Info.plist */,
 			);
 			path = "zomato-ios-order-sdk";
+			sourceTree = "<group>";
+		};
+		75B698021C9BC15400A79ADC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75B698041C9BC15400A79ADC /* ZLocalizations.bundle */,
+				75B698061C9BC15400A79ADC /* ZO2Kit.bundle */,
+				75B698071C9BC15400A79ADC /* ZO2Kit.framework */,
+			);
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +138,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75B6980D1C9BC15400A79ADC /* ZO2Kit.bundle in Resources */,
+				75B6980B1C9BC15400A79ADC /* ZLocalizations.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,11 +251,15 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = "zomato-ios-order-sdk/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zomato.zomato-ios-order-sdk";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -247,11 +271,15 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = "zomato-ios-order-sdk/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zomato.zomato-ios-order-sdk";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -275,6 +303,7 @@
 				75B698011C9BBA3000A79ADC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
