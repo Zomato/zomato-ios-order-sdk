@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "75B697F61C9BBA3000A79ADC"
-               BuildableName = "zomato-ios-order-sdk.framework"
+               BuildableName = "zomato_ios_order_sdk.framework"
                BlueprintName = "zomato-ios-order-sdk"
                ReferencedContainer = "container:zomato-ios-order-sdk.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "75B697F61C9BBA3000A79ADC"
-            BuildableName = "zomato-ios-order-sdk.framework"
+            BuildableName = "zomato_ios_order_sdk.framework"
             BlueprintName = "zomato-ios-order-sdk"
             ReferencedContainer = "container:zomato-ios-order-sdk.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "75B697F61C9BBA3000A79ADC"
-            BuildableName = "zomato-ios-order-sdk.framework"
+            BuildableName = "zomato_ios_order_sdk.framework"
             BlueprintName = "zomato-ios-order-sdk"
             ReferencedContainer = "container:zomato-ios-order-sdk.xcodeproj">
          </BuildableReference>
