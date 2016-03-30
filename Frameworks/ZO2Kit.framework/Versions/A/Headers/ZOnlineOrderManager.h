@@ -117,7 +117,22 @@ extern NSString *const zOrderPlaced;
 
 + (void) shouldSetNavigationBarAppearanceToDefault:(BOOL) value;
 
+/**
+ *  Call this function to set ZomatoUserToken so that user's saved addresses and data mapped to zomato user token is set in the app
+ *
+ *  @param zomatoUserToken   NSString
+ */
 
+- (void) setZomatoUserToken:(NSString *) zomatoUserToken;
+
+
+/**
+ *  This is used to retrieve zomato user token
+ *
+ *  @param completionHandler this block gets called when data is retrieved
+ */
+
+- (void) getZomatoUserTokenWithCompletionHandler:(void (^)(NSError *error, NSString *zomatoUserToken))completionHandler;
 
 /**
  *  Call this function to set Theme Color. Default Color: 0xcb202d

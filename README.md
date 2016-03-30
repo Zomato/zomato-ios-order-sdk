@@ -17,6 +17,7 @@
 * ### In didFinishLaunchingWithOptions initialize SDK
 		 [ZOnlineOrderManager setAPIKey:@"orderingsdkapikey" andAPISecret:@"secretkey"];
 
+
 * ### To set background color of Navigation bar,  pass color value in this function
 		[ZOnlineOrderManager setThemeColor:0xcb202d];
 
@@ -46,8 +47,14 @@
 * ### To open order detail pass order id in the following function
 		[[ZOnlineOrderManager sharedInitializer] showOrderDetailViewControllerForOrderID:@"<order-id-string>" viewController:self];
 
+* ### To set zomato user token you need to call this function before starting online ordering flow
+		[[ZOnlineOrderManager sharedInitializer] setZomatoUserToken:@"zomatoUserToken"];
+
+* ### To get zomato user token you need to call this function and block in the function's params is invoked after token is generated
+		[[ZOnlineOrderManager sharedInitializer] getZomatoUserTokenWithCompletionHandler:^(NSError *error, NSString *zomatoUserToken){ // code  }];
 
 
+	 *Note: Whenever the ordering flow is started from the main application, an access token is generated, which is saved locally in the device storage and is used analogous to a session id. So, all user activity (orders, saved addressed) is mapped to this access token. The user's Zomato account is totally independent of this. Reinstall the application, logging out and clearing data removes the access token from the local storage and a new token is generated for the next time. This might lead to the loss of the details mapped to that particular user. Hence, the access token must be saved if the application wants to maintain the user data mapping.*
 
 * ### To remove all user logs
 		[ZOnlineOrderManager invalidate];
