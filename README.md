@@ -27,7 +27,7 @@
 * ### To set background color of Bottom Buttons, pass color value in this function
 		 [ZOnlineOrderManager setBottomBarColor:0x099e44];
 
-* ### To set background color of Navigation bar,  pass color value in this function
+* ### To set image for the right navigation bar button on Ordering Home use this function
 		[ZOnlineOrderManager setRightActionButtonImage:[UIImage imageNamed:@"<imageName>"]]
 
 
