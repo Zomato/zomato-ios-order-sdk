@@ -27,6 +27,12 @@
 * ### To set background color of Bottom Buttons, pass color value in this function
 		 [ZOnlineOrderManager setBottomBarColor:0x099e44];
 
+* ### To set background color of Navigation bar,  pass color value in this function
+		[ZOnlineOrderManager setRightActionButtonImage:[UIImage imageNamed:@"<imageName>"]]
+
+
+	 *Note: For action on this button tap, set your view controller as delegate with `[[ZOnlineOrderManager sharedInitializer] setDelegate:self]` and use the delegate method `didTapHomeRightActionBarButtonOnNavigationContoller:`.*
+
 * ### Now when you want to place order pass your phone number in this function
 
   * #### For Modal Present
