@@ -89,6 +89,12 @@ extern NSString *const zOrderPlaced;
  */
 - (void)startOnlineOrderWithPhoneNumber:(NSString *)number pushOnNavViewController:(UINavigationController *)controller;
 
+/**
+ *  Call this function to set a name for the user who is placing the order.
+ *
+ *  @param fullName NSString object containing the user name
+ */
+- (void)setUserFullName:(NSString *)fullName;
 
 /**
  *  Call this function to present the order detail page
