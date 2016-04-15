@@ -33,6 +33,10 @@
 
 	 *Note: For action on this button tap, set your view controller as delegate with `[[ZOnlineOrderManager sharedInitializer] setDelegate:self]` and use the delegate method `didTapHomeRightActionBarButtonOnNavigationContoller:`.*
 
+* ### To set the name of the User use this method
+
+		[[ZOnlineOrderManager sharedInitializer] setUserFullName:@"<Name>"]
+
 * ### Now when you want to place order pass your phone number in this function
 
   * #### For Modal Present
