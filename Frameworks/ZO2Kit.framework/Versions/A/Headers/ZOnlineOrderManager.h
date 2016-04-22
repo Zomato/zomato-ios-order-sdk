@@ -34,6 +34,11 @@ extern NSString *const zOrderPlaced;
  */
 - (void)didTapHomeRightActionBarButtonOnNavigationContoller:(UINavigationController *)navigationController;
 
+/**
+ *  this will be called whenever the user dismisses the session for ordering. The `isOrderPlaced` BOOL flag tells whether the order was placed in the current session.
+ */
+- (void)didDismissZomatoOrderFlowWithOrderPlaced:(BOOL)isOrderPlaced;
+
 @end
 
 @interface ZOnlineOrderManager : NSObject
@@ -89,12 +94,6 @@ extern NSString *const zOrderPlaced;
  */
 - (void)startOnlineOrderWithPhoneNumber:(NSString *)number pushOnNavViewController:(UINavigationController *)controller;
 
-/**
- *  Call this function to set a name for the user who is placing the order.
- *
- *  @param fullName NSString object containing the user name
- */
-- (void)setUserFullName:(NSString *)fullName;
 
 /**
  *  Call this function to present the order detail page
@@ -119,13 +118,18 @@ extern NSString *const zOrderPlaced;
  */
 - (void)getZomatoOrderObjectWithOrderId:(NSString *)orderId completionHandler:(void (^)(NSError *error, PlaceOrderTab *zomatoOrderObject))completionHandler;
 
-
 /**
  *  Call this function to set user Location for showing restaurant suggestions
  *  @param userLocation   CLLocation object of user location
  */
 - (void)setUserLocation:(CLLocation *)userLocation;
 
+/**
+ *  Use this method to set the name of the User for ordering.
+ *
+ *  @param fullName Name of the User
+ */
+- (void)setUserFullName:(NSString *)fullName;
 
 /**
  *  Call invalidate if user logs out from your app. Show that we can clear logged in user data.
