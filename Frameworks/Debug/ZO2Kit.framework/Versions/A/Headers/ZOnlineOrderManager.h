@@ -141,6 +141,14 @@ extern NSString *const zOrderPlaced;
  */
 - (void)setUserFullName:(NSString *)fullName;
 
+
+/**
+ *  Use this method to set the phone of the User for ordering.
+ *
+ *  @param Phone Number of the User
+ */
+- (void)setUserPhoneNumber:(NSString *)number;
+
 /**
  *  Call invalidate if user logs out from your app. Show that we can clear logged in user data.
  */

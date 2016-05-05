@@ -11,11 +11,6 @@
 #import <CoreLocation/CoreLocation.h>
 #import "PlaceOrderTab.h"
 
-typedef NS_ENUM(NSInteger, ZomatoTrackingEventType) {
-    ZomatoTrackingEventTypePageView,
-    ZomatoTrackingEventTypeClickStream
-};
-
 /**
  *  this notification is fired when any of the order in active orders array is changed, listen to this to fetch active orders array
  */
@@ -43,11 +38,6 @@ extern NSString *const zOrderPlaced;
  *  this will be called whenever the user dismisses the session for ordering. The `isOrderPlaced` BOOL flag tells whether the order was placed in the current session.
  */
 - (void)didDismissZomatoOrderFlowWithOrderPlaced:(BOOL)isOrderPlaced;
-
-/*
- * this method can be used to register and track events.
- */
-- (void)trackZomatoEvent:(NSString *)eventName trackingEventType:(ZomatoTrackingEventType)eventType data:(NSDictionary *)dataDict;
 
 @end
 
