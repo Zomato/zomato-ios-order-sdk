@@ -469,6 +469,7 @@ extern NSString *const zOrderPlaced;
  */
 + (void)setColorSearchInfoLabel:(NSInteger)colorSearchInfoLabel;
 
+
 /**
  *
  * Set image for the right navigation bar button on Ordering Home
@@ -476,5 +477,15 @@ extern NSString *const zOrderPlaced;
  *  @param image UIImage object for the button image. The button is 54x54 points in size.
  */
 + (void)setRightActionButtonImage:(UIImage *)image;
+
+/**
+ *
+ *  On setting value to YES, it will dismiss order flow after placing an order
+ *
+ *  @param value : BOOL  Default Value:NO
+ */
++ (void)shouldDismissOrderFlowAfterPlacingOrder:(BOOL)value;
+
+
 
 @end
