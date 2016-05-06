@@ -11,6 +11,11 @@
 #import <CoreLocation/CoreLocation.h>
 #import "PlaceOrderTab.h"
 
+typedef NS_ENUM(NSInteger, ZomatoTrackingEventType) {
+    ZomatoTrackingEventTypePageView,
+    ZomatoTrackingEventTypeClickStream
+};
+
 /**
  *  this notification is fired when any of the order in active orders array is changed, listen to this to fetch active orders array
  */
@@ -38,6 +43,11 @@ extern NSString *const zOrderPlaced;
  *  this will be called whenever the user dismisses the session for ordering. The `isOrderPlaced` BOOL flag tells whether the order was placed in the current session.
  */
 - (void)didDismissZomatoOrderFlowWithOrderPlaced:(BOOL)isOrderPlaced;
+
+/*
+ * this method can be used to register and track events.
+ */
+- (void)trackZomatoEvent:(NSString *)eventName trackingEventType:(ZomatoTrackingEventType)eventType data:(NSDictionary *)dataDict;
 
 @end
 
@@ -130,6 +140,14 @@ extern NSString *const zOrderPlaced;
  *  @param fullName Name of the User
  */
 - (void)setUserFullName:(NSString *)fullName;
+
+
+/**
+ *  Use this method to set the phone of the User for ordering.
+ *
+ *  @param Phone Number of the User
+ */
+- (void)setUserPhoneNumber:(NSString *)number;
 
 /**
  *  Call invalidate if user logs out from your app. Show that we can clear logged in user data.
@@ -451,6 +469,7 @@ extern NSString *const zOrderPlaced;
  */
 + (void)setColorSearchInfoLabel:(NSInteger)colorSearchInfoLabel;
 
+
 /**
  *
  * Set image for the right navigation bar button on Ordering Home
@@ -458,5 +477,15 @@ extern NSString *const zOrderPlaced;
  *  @param image UIImage object for the button image. The button is 54x54 points in size.
  */
 + (void)setRightActionButtonImage:(UIImage *)image;
+
+/**
+ *
+ *  On setting value to YES, it will dismiss order flow after placing an order
+ *
+ *  @param value : BOOL  Default Value:NO
+ */
++ (void)shouldDismissOrderFlowAfterPlacingOrder:(BOOL)value;
+
+
 
 @end
