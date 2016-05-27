@@ -27,5 +27,5 @@
 @property (nonatomic, strong) Restaurant *restaurant;
 @property (nonatomic, strong) NSString *offerType;
 @property (nonatomic, strong) NSNumber *typeCode;
-
+@property (nonatomic, strong) NSString *shortText;
 @end

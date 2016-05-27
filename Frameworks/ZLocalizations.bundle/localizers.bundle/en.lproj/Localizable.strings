@@ -429,3 +429,8 @@
 "DATE_PICKER_HEADER" = "Date of birth";
 "PROMO_CODE_REMOVED_MESSSAGE_ON_PAYMENT_METHOD_CHANGE" = "Promo code has been removed. Please reapply.";
 "ORDER_ID" = "Order id";
+"COST_FOR_ONE" = "Cost %@ for one";
+"MIN_%@" = "Min %@";
+"IN_%@_MIN" = "Up to %@ min";
+"AVAILABLE" = "Pay Online";
+"Open" = "Open";

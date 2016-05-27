@@ -247,6 +247,8 @@ typedef enum {
 @property (nonatomic, strong) NSString *highlightText;
 @property (nonatomic, strong) NSNumber *isDominos;
 @property (nonatomic, strong) NSNumber *foodshotsCount;
+@property (nonatomic, strong) NSString *o2FeaturedImage;
+@property (nonatomic, strong) NSNumber *avgCostForOne;
 @property (nonatomic, strong) NSString *openTimingsString;
 @property (nonatomic, strong) NSString *closeTimingsString;
 @property (nonatomic, strong) NSNumber *hasLoyalty;
