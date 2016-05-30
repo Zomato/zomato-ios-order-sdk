@@ -37,16 +37,19 @@ extern NSString *const zOrderPlaced;
 /**
  *  this will be called whenever user taps on the right action bar button in the navigation bar present on the home restaurant search page. (Conform to ZOnlineOrderManagerDelegate protocol and call `setDelegate:` with the `sharedInitializer` object)
  */
+@optional
 - (void)didTapHomeRightActionBarButtonOnNavigationContoller:(UINavigationController *)navigationController;
 
 /**
  *  this will be called whenever the user dismisses the session for ordering. The `isOrderPlaced` BOOL flag tells whether the order was placed in the current session.
  */
+@optional
 - (void)didDismissZomatoOrderFlowWithOrderPlaced:(BOOL)isOrderPlaced;
 
-/*
+/**
  * this method can be used to register and track events.
  */
+@optional
 - (void)trackZomatoEvent:(NSString *)eventName trackingEventType:(ZomatoTrackingEventType)eventType data:(NSDictionary *)dataDict;
 
 @end
