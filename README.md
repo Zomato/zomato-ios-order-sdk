@@ -37,6 +37,11 @@
 
 		[[ZOnlineOrderManager sharedInitializer] setUserFullName:@"<Name>"]
 
+* ### To set the phone number of the user after starting order flow
+
+		        [[ZOnlineOrderManager sharedInitializer] setUserPhoneNumber:@"<user's phone number>"];
+
+
 * ### Now when you want to place order pass your phone number in this function
 
   * #### For Modal Present
@@ -53,6 +58,12 @@
 * ### When order status will change you will receive a notification with PlaceOrderTab Object inside it.
 
 		extern NSString *const zOrderStatusChanged;
+
+* ### Set the restaurant id before starting the order flow to open a particular restaurant.
+
+		[[ZOnlineOrderManager sharedInitializer] setRestaurantId:<res_id>];
+
+
 
 * ### To open order detail pass order id in the following function
 		[[ZOnlineOrderManager sharedInitializer] showOrderDetailViewControllerForOrderID:@"<order-id-string>" viewController:self];
