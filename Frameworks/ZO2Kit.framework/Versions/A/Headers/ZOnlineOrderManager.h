@@ -485,10 +485,16 @@ extern NSString *const zOrderPlaced;
  *
  *  On setting value to YES, it will dismiss order flow after placing an order
  *
- *  @param value : BOOL  Default Value:NO
+ *  @param value : BOOL  Default Value:YES
  */
 + (void)shouldDismissOrderFlowAfterPlacingOrder:(BOOL)value;
 
-
+/**
+ *
+ *  Set the restaurant id before starting the order flow to open a particular restaurant
+ *
+ *  @param value : (NSNumber *) id of a restaurant
+ */
+- (void)setRestaurantId:(NSNumber *)resId;
 
 @end
