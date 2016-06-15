@@ -436,3 +436,5 @@
 "Open" = "Open";
 "POWERED_BY" = "Powered by";
 "ZOMATO" = "Zomato";
+"TRANSACTION_DISCLAIMER" = "By completing this transaction, you agree to Zomato's ";
+"TERMS_OF_SERVICE" = "Terms of Service";
