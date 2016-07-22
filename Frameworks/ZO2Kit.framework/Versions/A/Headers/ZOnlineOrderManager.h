@@ -497,4 +497,14 @@ extern NSString *const zOrderPlaced;
  */
 - (void)setRestaurantId:(NSNumber *)resId;
 
+/**
+ *
+ *  Set the address of the user before starting the order flow
+ *
+ *  @param value : (NSString *) address of the user
+ */
+- (void)setUserAddress:(NSString *)userAddress;
+
+
+
 @end
