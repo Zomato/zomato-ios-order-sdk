@@ -438,3 +438,5 @@
 "ZOMATO" = "Zomato";
 "TRANSACTION_DISCLAIMER" = "By completing this transaction, you agree to Zomato's ";
 "TERMS_OF_SERVICE" = "Terms of Service";
+"ORDER_BY_CUISINE" = "ORDER BY CUISINE";
+"ALL_DELIVERY_RESTAURANTS_%@" = "All delivery options for %@";

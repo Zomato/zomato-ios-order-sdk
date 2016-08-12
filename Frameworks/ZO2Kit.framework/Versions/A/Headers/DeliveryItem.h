@@ -35,6 +35,9 @@
 @property (nonatomic, strong) NSNumber *isOnMRP;
 @property (nonatomic, strong) NSNumber *taxInclusive;
 @property (nonatomic, strong) NSNumber *isDefault;
+@property (nonatomic, strong) NSString *currency;
+@property (nonatomic, strong) NSString *currencyAffix;
+@property (nonatomic, strong) NSString *serves;
 @property (nonatomic) BOOL isAnyItemInMenuVegOrNonVeg;
 
 @end

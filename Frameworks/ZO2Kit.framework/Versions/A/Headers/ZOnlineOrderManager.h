@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import "PlaceOrderTab.h"
+#import "AccountBannerObject.h"
 
 typedef NS_ENUM(NSInteger, ZomatoTrackingEventType) {
     ZomatoTrackingEventTypePageView,
@@ -45,6 +46,13 @@ extern NSString *const zOrderPlaced;
  */
 @optional
 - (void)didDismissZomatoOrderFlowWithOrderPlaced:(BOOL)isOrderPlaced;
+
+
+/**
+ *  this will be called whenever the user verifies the phone number. The phone number can be stored at your end and can be passed next time.
+ */
+@optional
+- (void)userSuccessfullyVerifiedPhoneNumber:(NSString *)phoneNumber;
 
 /**
  * this method can be used to register and track events.
@@ -85,10 +93,52 @@ extern NSString *const zOrderPlaced;
 
 /**
  *  Use this to set a delegate conforming to the ZOnlineOrderManagerDelegate protocol.
- *
- *  @param delegate object conforming to ZOnlineOrderManagerDelegate protocol
  */
-- (void)setDelegate:(id<ZOnlineOrderManagerDelegate>)delegate;
+
+@property (nonatomic, weak) id<ZOnlineOrderManagerDelegate> delegate;
+
+/**
+ *  Use this to set a first banner on home page. If you are settings the first banner then 
+ *  imageUrl, title, deeplinkUrl, and tagline are REQUIRED properties that needs to be set.
+ */
+
+@property (nonatomic, strong) AccountBannerObject *homePageBannerObject;
+
+
+/**
+ *  Use this to set banner on final page. If you are settings the first banner then
+ *  imageUrl, title, and subtitle are REQUIRED properties that needs to be set.
+ */
+
+@property (nonatomic, strong) AccountBannerObject *finalPaymentPageBannerObject;
+
+
+/**
+ *  Use this to set initial search string if required. Default is nil.
+ */
+
+@property (nonatomic, strong) NSString *initialSearchString;
+
+
+/**
+ *  Use this to set initial search params  dictionary if required. Default is nil.
+ */
+
+@property (nonatomic, strong) NSDictionary *initialSearchParams;
+
+
+/**
+ *  Use this to add space below title text 'Menu' on Menu Page. Required in some font family. Default is nil.
+ */
+
+@property (nonatomic, strong) NSNumber *menuPageHeaderSpace;
+
+/**
+ *  Use this to add/remove space above checkbox and radio button in customization of an item
+ */
+
+@property (nonatomic, strong) NSNumber *customizationSelectionItemEmptySpace;
+
 
 /**
  *  Call this function to present the online ordering view controller to present
@@ -194,6 +244,17 @@ extern NSString *const zOrderPlaced;
  *  @param colorValue   Color Value
  */
 + (void)setBottomBarColor:(NSInteger)colorValue;
+
+
+/**
+ *
+ *  Set this to yes if you are using to have dark theme. Default value is NO
+ *
+ *  @param BOOL value
+ */
+
+
++ (void)setIsThemeDark:(BOOL)value;
 
 
 // Call given below functions to set font size of different custom labels
@@ -468,10 +529,21 @@ extern NSString *const zOrderPlaced;
 
 
 /**
- * To be used for a for search info strings. Default Value: 0x9d9d9d
+ * To be used for search info strings. Default Value: 0x9d9d9d
  */
 + (void)setColorSearchInfoLabel:(NSInteger)colorSearchInfoLabel;
 
+/**
+ * To be used for backgroundColor. Default Value: 0xFFFFFF
+ */
+
++ (void) setBackgroundColor:(NSInteger)colorBg;
+
+/**
+ * To be used for darkBackgroundColor. Default Value: 0x9d9d9d
+ */
+
++ (void) setDarkBackgroundColor:(NSInteger)colorDarkBg;
 
 /**
  *
@@ -504,7 +576,5 @@ extern NSString *const zOrderPlaced;
  *  @param value : (NSString *) address of the user
  */
 - (void)setUserAddress:(NSString *)userAddress;
-
-
 
 @end
