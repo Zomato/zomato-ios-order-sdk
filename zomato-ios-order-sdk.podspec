@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "zomato-ios-order-sdk"
-  s.version      = "1.4"
+  s.version      = "1.4.1"
   s.summary      = "Zomato Order SDK for iOS"
 
   s.description  = "With Zomato Order SDK for iOS, you can add Online Ordering feature to your application."
