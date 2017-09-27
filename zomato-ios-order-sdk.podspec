@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "zomato-ios-order-sdk"
-  s.version      = "1.4.2"
+  s.version      = "1.4.3"
   s.summary      = "Zomato Order SDK for iOS"
 
   s.description  = "With Zomato Order SDK for iOS, you can add Online Ordering feature to your application."
@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
 
   s.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC -lc++' }
 
-  s.vendored_frameworks  = "Frameworks/ZMTApiManageriOS.framework", "Frameworks/ZUIKit.framework", "Frameworks/ZCommons.framework", "Frameworks/ZO2Kit.framework"
+  s.vendored_frameworks  = "Frameworks/ZO2Kit.framework"
 
   s.requires_arc = true
 
