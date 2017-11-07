@@ -22,10 +22,10 @@ typedef NS_ENUM(NSInteger, ApiCallPriority) {
 
 @property (nonatomic, strong) NSNumber *zid;
 @property (nonatomic, strong) NSNumber *unixTimeStamp;
-@property (nonatomic, strong) NSString *timeAgo;
+
 
 - (NSString *) inspect;
-- (NSString *) timeAgo;
+
 - (void) setUnixTimeStamp:(NSNumber *)timeStamp;
 - (NSNumber *) unixTimeStamp;
 - (BOOL) isObjectWithSameZid : (ZomatoObject *) zObject;

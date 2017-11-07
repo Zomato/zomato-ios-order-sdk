@@ -142,8 +142,6 @@ typedef enum {
 @property (weak, nonatomic) id restaurantDelegate;
 @property (strong, nonatomic) NSString *groupId;
 
-@property (nonatomic, strong) NSMutableArray *offers;
-@property (nonatomic, strong) NSMutableArray *eventsArray;
 @property (nonatomic, strong) NSString *knownFor;
 @property (nonatomic, strong) NSNumber *checkInCount;
 @property (nonatomic, strong) NSNumber *isOnlineDeliveringNow;
